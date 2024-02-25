@@ -128,17 +128,19 @@ class Game
       end
     end
 
+# 手札がなくなった場合
     if @user1.cards.count == 0
       p 'プレイヤー1の手札がなくなりました。'
     else
       p 'プレイヤー2の手札がなくなりました。'
     end
-
+#　手札の合計
     user1_sum = @user1.cards.count + @stock_user1.count
     user2_sum = @user2.cards.count + @stock_user2.count
     p "プレイヤー1の手札の枚数は#{ user1_sum }枚です。プレイヤー2の手札の枚数は#{ user2_sum
     }枚です。"
 
+# 順位
     if user1_sum > user2_sum
       p 'プレイヤー1が1位、プレイヤー2が2位です。'
     else
